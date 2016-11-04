@@ -29,7 +29,7 @@ namespace PhotoSharingApp.Universal.ServiceEnvironments
     /// </summary>
     public class ServiceEnvironment : ServiceEnvironmentBase
     {
-        private const string AzureAppServiceBaseUrl = "https://[Your Prod Azure App Service].azurewebsites.net/";
+        private const string AzureAppServiceBaseUrl = "https://photosharingappdemo.azurewebsites.net";
 
         /// <summary>
         /// The Azure App service base URL.

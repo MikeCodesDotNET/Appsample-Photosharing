@@ -248,8 +248,7 @@ namespace PhotoSharingApp.Universal.Services
         /// Gets the leaderboard statistical data
         /// </summary>
         /// <returns>The leaderboard</returns>
-        public async Task<Leaderboard> GetLeaderboardData(int mostGoldCategoriesCount, int mostGoldPhotosCount,
-            int mostGoldUsersCount, int mostGivingUsersCount)
+        public async Task<Leaderboard> GetLeaderboardData(int mostGoldCategoriesCount, int mostGoldPhotosCount, int mostGoldUsersCount, int mostGivingUsersCount)
         {
             try
             {
@@ -301,8 +300,7 @@ namespace PhotoSharingApp.Universal.Services
         /// <param name="categoryId">The identifier.</param>
         /// <param name="continuationToken">Optional. The continuation token. By default, null.</param>
         /// <returns>The photos.</returns>
-        public async Task<PagedResponse<Photo>> GetPhotosForCategoryId(string categoryId,
-            string continuationToken = null)
+        public async Task<PagedResponse<Photo>> GetPhotosForCategoryId(string categoryId, string continuationToken = null)
         {
             try
             {
@@ -404,9 +402,7 @@ namespace PhotoSharingApp.Universal.Services
         {
             try
             {
-                return await _mobileServiceClient.InvokeApiAsync<List<SasContract>>("sasurl",
-                    HttpMethod.Get,
-                    null);
+                return await _mobileServiceClient.InvokeApiAsync<List<SasContract>>("sasurl", HttpMethod.Get, null);
             }
             catch (Exception e)
             {

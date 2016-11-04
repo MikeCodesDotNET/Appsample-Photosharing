@@ -40,8 +40,6 @@ namespace PhotoSharingApp.AppService.Models
         /// <summary>
         /// The notification hub client.
         /// </summary>
-        public NotificationHubClient Hub { get; set; } = NotificationHubClient.CreateClientFromConnectionString(
-                    SystemContext.Current.Environment.HubFullSharedAccessSignature,
-                    SystemContext.Current.Environment.HubName);
+        public NotificationHubClient Hub { get; set; } = NotificationHubClient.CreateClientFromConnectionString(SystemContext.Current.Environment.HubFullSharedAccessSignature, SystemContext.Current.Environment.HubName);
     }
 }

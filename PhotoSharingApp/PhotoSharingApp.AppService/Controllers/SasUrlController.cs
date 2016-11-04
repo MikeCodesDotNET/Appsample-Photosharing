@@ -72,8 +72,7 @@ namespace PhotoSharingApp.AppService.Controllers
                 string sasContainerName;
 
                 // Set the container to the name of the phototype, container names must be lower case
-                _environment.ImageContainerNameMappings.TryGetValue(
-                    currentPhotoTypeContract, out sasContainerName);
+                _environment.ImageContainerNameMappings.TryGetValue(currentPhotoTypeContract, out sasContainerName);
 
                 // Create the blob client object.
                 var container = containerClient.GetContainerReference(sasContainerName);
